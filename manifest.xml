@@ -12,8 +12,9 @@
   <DefaultLocale>es-CR</DefaultLocale>
   <DisplayName DefaultValue="Auditoría de Cifras PEN"/>
   <Description DefaultValue="Detecta cifras en el documento abierto, las verifica contra documentos fuente y registra la revisión con comentarios y resaltado por semáforo."/>
-  <IconUrl DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/assets/icon-80.png"/>
+
+  <IconUrl DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/assets/icon-80.png"/>
   <SupportUrl DefaultValue="https://estadonacion.or.cr/"/>
 
   <Hosts>
@@ -27,70 +28,119 @@
   </Requirements>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/taskpane.html"/>
+    <SourceLocation DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/taskpane.html"/>
   </DefaultSettings>
 
   <Permissions>ReadWriteDocument</Permissions>
 
-  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+  <VersionOverrides
+    xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+    xsi:type="VersionOverridesV1_0">
+
     <Hosts>
       <Host xsi:type="Document">
         <DesktopFormFactor>
+
           <GetStarted>
             <Title resid="GetStarted.Title"/>
             <Description resid="GetStarted.Description"/>
             <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
           </GetStarted>
+
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
             <OfficeTab id="TabHome">
+
               <Group id="PEN.Group">
                 <Label resid="PEN.Group.Label"/>
+
                 <Icon>
                   <bt:Image size="16" resid="Icon.16"/>
                   <bt:Image size="32" resid="Icon.32"/>
                   <bt:Image size="80" resid="Icon.80"/>
                 </Icon>
+
                 <Control xsi:type="Button" id="PEN.Open">
+
                   <Label resid="PEN.Open.Label"/>
+
                   <Supertip>
                     <Title resid="PEN.Open.Label"/>
                     <Description resid="PEN.Open.Tip"/>
                   </Supertip>
+
                   <Icon>
                     <bt:Image size="16" resid="Icon.16"/>
                     <bt:Image size="32" resid="Icon.32"/>
                     <bt:Image size="80" resid="Icon.80"/>
                   </Icon>
+
                   <Action xsi:type="ShowTaskpane">
                     <TaskpaneId>PEN.Taskpane</TaskpaneId>
                     <SourceLocation resid="Taskpane.Url"/>
                   </Action>
+
                 </Control>
+
               </Group>
             </OfficeTab>
           </ExtensionPoint>
+
         </DesktopFormFactor>
       </Host>
     </Hosts>
+
     <Resources>
+
       <bt:Images>
-        <bt:Image id="Icon.16" DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/assets/icon-16.png"/>
-        <bt:Image id="Icon.32" DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/assets/icon-32.png"/>
-        <bt:Image id="Icon.80" DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/assets/icon-80.png"/>
+        <bt:Image
+          id="Icon.16"
+          DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/assets/icon-16.png"/>
+
+        <bt:Image
+          id="Icon.32"
+          DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/assets/icon-32.png"/>
+
+        <bt:Image
+          id="Icon.80"
+          DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/assets/icon-80.png"/>
       </bt:Images>
+
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://programa-estado-nacion.github.io/auditoria-cifras-pen/taskpane.html"/>
-        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://estadonacion.or.cr/"/>
+        <bt:Url
+          id="Taskpane.Url"
+          DefaultValue="https://usuarioest-pen.github.io/autoria-cifras-pen/src/taskpane.html"/>
+
+        <bt:Url
+          id="GetStarted.LearnMoreUrl"
+          DefaultValue="https://estadonacion.or.cr/"/>
       </bt:Urls>
+
       <bt:ShortStrings>
-        <bt:String id="PEN.Group.Label" DefaultValue="Auditoría PEN"/>
-        <bt:String id="PEN.Open.Label" DefaultValue="Auditoría de cifras"/>
-        <bt:String id="GetStarted.Title" DefaultValue="Auditoría de Cifras PEN"/>
+        <bt:String
+          id="PEN.Group.Label"
+          DefaultValue="Auditoría PEN"/>
+
+        <bt:String
+          id="PEN.Open.Label"
+          DefaultValue="Auditoría de cifras"/>
+
+        <bt:String
+          id="GetStarted.Title"
+          DefaultValue="Auditoría de Cifras PEN"/>
       </bt:ShortStrings>
+
       <bt:LongStrings>
-        <bt:String id="PEN.Open.Tip" DefaultValue="Abrir el panel para detectar y verificar cifras del documento."/>
-        <bt:String id="GetStarted.Description" DefaultValue="Use el botón «Auditoría de cifras» en la pestaña Inicio para abrir el panel."/>
+        <bt:String
+          id="PEN.Open.Tip"
+          DefaultValue="Abrir el panel para detectar y verificar cifras del documento."/>
+
+        <bt:String
+          id="GetStarted.Description"
+          DefaultValue="Use el botón «Auditoría de cifras» en la pestaña Inicio para abrir el panel."/>
       </bt:LongStrings>
+
     </Resources>
+
   </VersionOverrides>
+
 </OfficeApp>
